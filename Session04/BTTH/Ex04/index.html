@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        margin: 0 auto;
+        width: 70vw;
+        height: 70vh;
+        transition: background-color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box" class="highlight">
+      <button id="btn">Toggle highlight</button>
+    </div>
+    <script>
+      const boxEle = document.getElementById("box");
+      const btnEle = document.getElementById("btn");
+
+      btnEle.addEventListener("click", (event) => {
+        boxEle.classList.toggle("highlight");
+      });
+    </script>
+  </body>
+</html>
