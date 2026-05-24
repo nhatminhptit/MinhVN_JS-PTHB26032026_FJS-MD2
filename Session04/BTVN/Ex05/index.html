@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="user-input" />
+    <p id="key-display"></p>
+    <script>
+      const inputElement = document.getElementById("user-input");
+      const displayElement = document.getElementById("key-display");
+
+      inputElement.addEventListener("keydown", (e) => {
+        displayElement.innerText = e.key;
+      });
+    </script>
+  </body>
+</html>
