@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="main-title">Nội dung ban đầu</h1>
+    <script>
+      let mainTitle = document.getElementById("main-title");
+
+      mainTitle.innerText = "Welcome to DOM Session.";
+
+      mainTitle.innerHTML += ' <span style="color: red;">Xin chào.</span>';
+    </script>
+  </body>
+</html>
