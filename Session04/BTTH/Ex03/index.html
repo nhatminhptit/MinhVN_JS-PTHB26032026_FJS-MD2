@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      id="img-test"
+      style="max-width: 500px"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxlFNtW21v5KbxQPc3edGicDc7elVan9_tIw&s"
+      alt="Ảnh minh họa"
+    />
+    <button id="btn-click">Change Image</button>
+    <script>
+      let btn = document.getElementById("btn-click");
+
+      btn.addEventListener("click", (event) => {
+        let imgAttribute = document
+          .getElementById("img-test")
+          .setAttribute(
+            "src",
+            "https://buulong.com.vn/wp-content/uploads/2026/02/hinh-anh-canh-quan-thien-nhien-4.jpg",
+          );
+
+        console.log(event);
+      });
+    </script>
+  </body>
+</html>
