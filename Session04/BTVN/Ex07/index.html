@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="register-form">
+      <div>
+        <label for="username">Tên người dùng:</label>
+        <input type="text" id="username" placeholder="Nhập tên người dùng..." />
+      </div>
+      <br />
+      <div>
+        <label for="email">Địa chỉ Email:</label>
+        <input type="text" id="email" placeholder="Nhập địa chỉ email..." />
+      </div>
+      <br />
+      <button type="submit">Gửi</button>
+    </form>
+    <script>
+      const formElement = document.getElementById("register-form");
+
+      formElement.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const value = {
+          username: e.target.username.value,
+          email: e.target.email.value,
+        };
+
+        console.log(value);
+
+        e.target.reset();
+      });
+    </script>
+  </body>
+</html>
