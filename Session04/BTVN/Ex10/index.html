@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        background-color: white;
+        padding: 30px 50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      #btn-change {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: 2px solid #333;
+        background-color: transparent;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+
+      #btn-change:hover {
+        opacity: 0.5;
+        transition: color 0.5 ease-in-out;
+      }
+
+      #color-name {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Background Color: <span id="color-name">White</span></h2>
+      <button id="btn-change">Change Background</button>
+    </div>
+    <script>
+      const colors = ["red", "blue", "green", "yellow", "purple"];
+
+      const btnChange = document.getElementById("btn-change");
+      let colorName = document.getElementById("color-name");
+
+      btnChange.addEventListener("click", (e) => {
+        const randomIdx = Math.floor(Math.random() * colors.length);
+        const randomColor = colors[randomIdx];
+
+        document.body.style.backgroundColor = randomColor;
+        colorName.innerText = colors[randomIdx];
+      });
+    </script>
+  </body>
+</html>
