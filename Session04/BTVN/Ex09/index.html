@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="parent">
+      Đây là phần tử cha
+      <br />
+      <br />
+      <button id="child">Đây là nút con</button>
+    </div>
+    <script>
+      const parent = document.getElementById("parent");
+      const child = document.getElementById("child");
+
+      parent.addEventListener("click", () => {
+        console.log("Sự kiện của Parent vừa chạy");
+      });
+
+      child.addEventListener("click", (e) => {
+        console.log("Sự kiện của Child vừa chạy");
+
+        e.stopPropagation();
+      });
+    </script>
+  </body>
+</html>
