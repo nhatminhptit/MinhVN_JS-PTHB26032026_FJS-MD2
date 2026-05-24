@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    button {
+      margin-left: 15px;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+  <body>
+    <ul id="my-list">
+      <li>Công việc 1 <button class="btn-delete">Xóa</button></li>
+      <li>Công việc 2 <button class="btn-delete">Xóa</button></li>
+      <li>Công việc 3 <button class="btn-delete">Xóa</button></li>
+      <li>Công việc 4 <button class="btn-delete">Xóa</button></li>
+      <li>Công việc 5 <button class="btn-delete">Xóa</button></li>
+    </ul>
+    <script>
+      const deleteBtn = document.querySelectorAll(".btn-delete");
+
+      deleteBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const clickedBtn = e.target;
+          const parentLi = clickedBtn.parentElement;
+          parentLi.remove();
+          console.log("Đã xóa thẻ:", parentLi);
+        });
+      });
+    </script>
+  </body>
+</html>
