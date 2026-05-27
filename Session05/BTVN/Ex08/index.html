@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let ages = [15, 20, 12, 18, 25, 30, 10];
+
+      function getAdults() {
+        let adults = ages.filter((age) => age >= 18);
+        adults.forEach((adult) => console.log(adult));
+      }
+
+      getAdults();
+    </script>
+  </body>
+</html>
