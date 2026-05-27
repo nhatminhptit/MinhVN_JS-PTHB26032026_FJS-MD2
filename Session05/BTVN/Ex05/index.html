@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [10, 3, 12, 89, 5, 32];
+
+      function checkNumber(searchValue) {
+        if (numbers.includes(searchValue)) return numbers.indexOf(searchValue);
+        return "Not found!";
+      }
+
+      let num = checkNumber(11);
+      console.log(num);
+    </script>
+  </body>
+</html>
