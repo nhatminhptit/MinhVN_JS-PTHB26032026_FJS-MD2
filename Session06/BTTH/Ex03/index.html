@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userProfile = {
+        username: "Minh",
+        age: 20,
+        email: "nhatminhptit405@gmail.com",
+        address: { city: "Hà Nội" },
+      };
+      let {
+        username: fullName,
+        address: { city },
+      } = userProfile;
+      console.log(fullName, city);
+    </script>
+  </body>
+</html>
