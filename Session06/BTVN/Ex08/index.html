@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function simulateTask() {
+        let task = new Promise((resolve, reject) => {
+          let doneTask = false;
+          setTimeout(() => {
+            if (doneTask) resolve("Hoàn thành task!");
+            else reject("Chưa hoàn thành task");
+          }, 2000);
+        });
+        return task;
+      }
+
+      async function runTask() {
+        try {
+          let result = await simulateTask();
+          console.log(result);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      runTask();
+    </script>
+  </body>
+</html>
