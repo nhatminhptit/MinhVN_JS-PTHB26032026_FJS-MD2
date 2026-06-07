@@ -1,0 +1,10 @@
+"use strict";
+let studentName = "Minh";
+let studentAge = 20;
+let isEnrolled = true;
+// let skills: string[] = ["HTML", "CSS", "C++"];
+let skills = ["HTML", "CSS", "C++"];
+console.log("Tên học viên:", studentName);
+console.log("Tuổi:", studentAge);
+console.log("Đã nhập học:", isEnrolled);
+console.log("Kỹ năng:", skills);
